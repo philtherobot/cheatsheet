@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>Cheatsheet</title>
@@ -34,7 +35,8 @@
       padding: 0.3em 0.6em;
       border-radius: 4px;
       margin-bottom: 0.5em;
-      break-inside: avoid; /* Prevent splitting pairs across columns */
+      break-inside: avoid;
+      /* Prevent splitting pairs across columns */
     }
 
     .shortcut {
@@ -49,152 +51,409 @@
     .description {
       padding: 2px 0;
     }
-  </style></head>
+  </style>
+</head>
+
 <body>
 
-<h1>Cheatsheet</h1>
+  <h1>Cheatsheet</h1>
 
-<section>
-  <h2>Tmux</h2>
-  Prefix key is Ctrl-B.
-  <div class="columns">
-    <div class="pair"><div class="description">split vertical</div><div class="shortcut">%</div></div>
-    <div class="pair"><div class="description">split horizontal</div><div class="shortcut">"</div></div>
-    <div class="pair"><div class="description">switch to next pane</div><div class="shortcut">o</div></div>
-    <div class="pair"><div class="description">kill current pane</div><div class="shortcut">x</div></div>
-    <div class="pair"><div class="description">zoom pane toggle</div><div class="shortcut">z</div></div>
-    <div class="pair"><div class="description">show pane numbers</div><div class="shortcut">q</div></div>
-    <div class="pair"><div class="description">cycle layout</div><div class="shortcut">Spc</div></div>
-    <div class="pair"><div class="description">copy mode</div><div class="shortcut">[</div></div>
-    <div class="pair"><div class="description">paste</div><div class="shortcut">]</div></div>
-    <div class="pair"><div class="description">create window</div><div class="shortcut">c</div></div>
-    <div class="pair"><div class="description">delete window</div><div class="shortcut">&</div></div>
-    <div class="pair"><div class="description">rename window</div><div class="shortcut">,</div></div>
-</div>
-</section>
+  <section>
+    <h2>Tmux</h2>
+    Prefix key is Ctrl-B.
+    <div class="columns">
+      <div class="pair">
+        <div class="description">split vertical</div>
+        <div class="shortcut">%</div>
+      </div>
+      <div class="pair">
+        <div class="description">split horizontal</div>
+        <div class="shortcut">"</div>
+      </div>
+      <div class="pair">
+        <div class="description">switch to next pane</div>
+        <div class="shortcut">o</div>
+      </div>
+      <div class="pair">
+        <div class="description">kill current pane</div>
+        <div class="shortcut">x</div>
+      </div>
+      <div class="pair">
+        <div class="description">zoom pane toggle</div>
+        <div class="shortcut">z</div>
+      </div>
+      <div class="pair">
+        <div class="description">show pane numbers</div>
+        <div class="shortcut">q</div>
+      </div>
+      <div class="pair">
+        <div class="description">cycle layout</div>
+        <div class="shortcut">Spc</div>
+      </div>
+      <div class="pair">
+        <div class="description">copy mode</div>
+        <div class="shortcut">[</div>
+      </div>
+      <div class="pair">
+        <div class="description">paste</div>
+        <div class="shortcut">]</div>
+      </div>
+      <div class="pair">
+        <div class="description">create window</div>
+        <div class="shortcut">c</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete window</div>
+        <div class="shortcut">&</div>
+      </div>
+      <div class="pair">
+        <div class="description">rename window</div>
+        <div class="shortcut">,</div>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Remote Desktop</h2>
-  <h3>When not full screen</h3>
-  <div class="columns">
-    <div class="pair"><div class="description">toggle to full screen</div><div class="shortcut">Ctrl-Alt-Pause</div></div>
-    <div class="pair"><div class="description">send "Alt-Tab"</div><div class="shortcut">Alt-PgDn</div></div>
-    <div class="pair"><div class="description">send "Alt-Shf-Tab"</div><div class="shortcut">Alt-PgUp</div></div>
-    <div class="pair"><div class="description">open Start Menu</div><div class="shortcut">Alt-Home</div></div>
-    <div class="pair"><div class="description">show RDP control bar</div><div class="shortcut">Ctrl-Alt-Home</div></div>
-    <div class="pair"><div class="description">window menu</div><div class="shortcut">Alt-Del</div></div>
-    <div class="pair"><div class="description">send "Ctrl-Alt-Del"</div><div class="shortcut">Ctrl-Alt-End</div></div>
-  </div>
-  <h3>Full screen</h3>
-  <div class="columns">
-    <div class="pair"><div class="description">toggle out from full screen</div><div class="shortcut">Ctrl-Alt-Pause</div></div>
-  </div>
-</section>
+  <section>
+    <h2>Remote Desktop</h2>
+    <h3>When not full screen</h3>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">toggle to full screen</div>
+        <div class="shortcut">Ctrl-Alt-Pause</div>
+      </div>
+      <div class="pair">
+        <div class="description">send "Alt-Tab"</div>
+        <div class="shortcut">Alt-PgDn</div>
+      </div>
+      <div class="pair">
+        <div class="description">send "Alt-Shf-Tab"</div>
+        <div class="shortcut">Alt-PgUp</div>
+      </div>
+      <div class="pair">
+        <div class="description">open Start Menu</div>
+        <div class="shortcut">Alt-Home</div>
+      </div>
+      <div class="pair">
+        <div class="description">show RDP control bar</div>
+        <div class="shortcut">Ctrl-Alt-Home</div>
+      </div>
+      <div class="pair">
+        <div class="description">window menu</div>
+        <div class="shortcut">Alt-Del</div>
+      </div>
+      <div class="pair">
+        <div class="description">send "Ctrl-Alt-Del"</div>
+        <div class="shortcut">Ctrl-Alt-End</div>
+      </div>
+    </div>
+    <h3>Full screen</h3>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">toggle out from full screen</div>
+        <div class="shortcut">Ctrl-Alt-Pause</div>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Teams</h2>
-  <div class="columns">
-    <div class="pair"><div class="description">shortcuts help</div><div class="shortcut">Ctrl-.</div></div>
-    <div class="pair"><div class="description">go to channel</div><div class="shortcut">Ctrl-G</div></div>
-    <div class="pair"><div class="description">mute</div><div class="shortcut">Ctrl-Alt-M</div></div>
-    <div class="pair"><div class="description">leave</div><div class="shortcut">Ctrl-Alt-L</div></div>
-    <div class="pair"><div class="description">new chat</div><div class="shortcut">Ctrl-N</div></div>
-    <div class="pair"><div class="description">return to chat list</div><div class="shortcut">Esc</div></div>
-    <div class="pair"><div class="description">focus convo</div><div class="shortcut">Spc</div></div>
-    <div class="pair"><div class="description">compose message</div><div class="shortcut">Enter</div></div>
-    <div class="pair"><div class="description">react (and others)</div><div class="shortcut">Ctrl-Alt-R</div></div>
-  </div>
-  <h3>In the messages</h3>
-  <div class="columns">
-    <div class="pair"><div class="description">compose message</div><div class="shortcut">Ctrl-R</div></div>
-    <div class="pair"><div class="description">focus messages</div><div class="shortcut">Ctrl-M</div></div>
-    <div class="pair"><div class="description">react (and others)</div><div class="shortcut">Enter</div></div>
-  </div>
-</section>
+  <section>
+    <h2>Teams</h2>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">shortcuts help</div>
+        <div class="shortcut">Ctrl-.</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to channel</div>
+        <div class="shortcut">Ctrl-G</div>
+      </div>
+      <div class="pair">
+        <div class="description">mute</div>
+        <div class="shortcut">Ctrl-Alt-M</div>
+      </div>
+      <div class="pair">
+        <div class="description">leave</div>
+        <div class="shortcut">Ctrl-Alt-L</div>
+      </div>
+      <div class="pair">
+        <div class="description">new chat</div>
+        <div class="shortcut">Ctrl-N</div>
+      </div>
+      <div class="pair">
+        <div class="description">return to chat list</div>
+        <div class="shortcut">Esc</div>
+      </div>
+      <div class="pair">
+        <div class="description">focus convo</div>
+        <div class="shortcut">Spc</div>
+      </div>
+      <div class="pair">
+        <div class="description">compose message</div>
+        <div class="shortcut">Enter</div>
+      </div>
+      <div class="pair">
+        <div class="description">react (and others)</div>
+        <div class="shortcut">Ctrl-Alt-R</div>
+      </div>
+    </div>
+    <h3>In the messages</h3>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">compose message</div>
+        <div class="shortcut">Ctrl-R</div>
+      </div>
+      <div class="pair">
+        <div class="description">focus messages</div>
+        <div class="shortcut">Ctrl-M</div>
+      </div>
+      <div class="pair">
+        <div class="description">react (and others)</div>
+        <div class="shortcut">Enter</div>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>VS Code</h2>
-  <div class="columns">
-    <div class="pair"><div class="shortcut">Ctrl-J</div><div class="description">toggle terminal</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-Shf-P</div><div class="description">commands</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-P</div><div class="description">go to file</div></div>
-    <div class="pair"><div class="shortcut">F12</div><div class="description">go to symbol at cursor</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-T</div><div class="description">go to symbol</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-Shf-\</div><div class="description">go to bracket</div></div>
-    <div class="pair"><div class="shortcut">Alt-O</div><div class="description">go to cpp/h</div></div>
-    <div class="pair"><div class="shortcut">F4</div><div class="description">next find</div></div>
-    <div class="pair"><div class="shortcut">Alt-F8</div><div class="description">next problem</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-Spc</div><div class="description">auto completion</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-Alt-&ltarrows&gt</div><div class="description">multi carets</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-Alt-Shf-&ltarrows&gt</div><div class="description">select block</div></div>
-    <div class="pair"><div class="shortcut">Ctrl-/</div><div class="description">line comment</div></div>
-    <div class="pair"><div class="shortcut">Alt-Shf-A</div><div class="description">block comment</div></div>
-    <div class="pair"><div class="shortcut">Alt-Left</div><div class="description">navigate back</div></div>
-  </div>
-</section>
-
-<section>
-  <h2>vi</h2>
-  <div class="columns">
-    <div class="pair"><div class="shortcut">i</div><div class="description">enter insert mode</div></div>
-    <div class="pair"><div class="shortcut">Esc</div><div class="description">return to normal mode</div></div>
-    <div class="pair"><div class="shortcut">:w</div><div class="description">write (save) the file</div></div>
-    <div class="pair"><div class="shortcut">:q</div><div class="description">quit</div></div>
-    <div class="pair"><div class="shortcut">:wq</div><div class="description">save and quit</div></div>
-    <div class="pair"><div class="shortcut">dd</div><div class="description">delete (cut) the current line</div></div>
-    <div class="pair"><div class="shortcut">yy</div><div class="description">yank (copy) the current line</div></div>
-    <div class="pair"><div class="shortcut">p</div><div class="description">paste after the cursor</div></div>
-    <div class="pair"><div class="shortcut">u</div><div class="description">undo last change</div></div>
-    <div class="pair"><div class="shortcut">/word</div><div class="description">search for "word"</div></div>
-    <div class="pair"><div class="shortcut">n</div><div class="description">repeat search in same direction</div></div>
-    <div class="pair"><div class="shortcut">N</div><div class="description">repeat search in opposite direction</div></div>
-    <div class="pair"><div class="shortcut">G</div><div class="description">go to last line</div></div>
-    <div class="pair"><div class="shortcut">gg</div><div class="description">go to first line</div></div>
-    <div class="pair"><div class="shortcut">J</div><div class="description">join current line with next</div></div>
-    <div class="pair"><div class="shortcut">. (dot)</div><div class="description">repeat last command</div></div>
-    <div class="pair"><div class="shortcut">:set nu</div><div class="description">show line numbers</div></div>
-    <div class="pair"><div class="shortcut">:set nonu</div><div class="description">hide line numbers</div></div>
-    <div class="pair"><div class="shortcut">:%s/foo/bar/g</div><div class="description">replace "foo" with "bar" globally</div></div>
-    <div class="pair"><div class="shortcut">:vsplit file</div><div class="description">open file in vertical split</div></div>
-    <div class="pair"><div class="shortcut">:split file</div><div class="description">open file in horizontal split</div></div>
-    <div class="pair"><div class="shortcut">ctrl-w h/j/k/l</div><div class="description">move between splits</div></div>
-    <div class="pair"><div class="shortcut">x</div><div class="description">delete character under cursor</div></div>
-    <div class="pair"><div class="shortcut">X</div><div class="description">delete character before cursor</div></div>
-    <div class="pair"><div class="shortcut">dw</div><div class="description">delete word from cursor forward</div></div>
-    <div class="pair"><div class="shortcut">daw</div><div class="description">delete entire word (including space)</div></div>
-    <div class="pair"><div class="shortcut">de</div><div class="description">delete to end of word</div></div>
-    <div class="pair"><div class="shortcut">d$</div><div class="description">delete to end of line</div></div>
-    <div class="pair"><div class="shortcut">d0</div><div class="description">delete to start of line</div></div>
-    <div class="pair"><div class="shortcut">D</div><div class="description">delete from cursor to end of line</div></div>
-    <div class="pair"><div class="shortcut">dG</div><div class="description">delete from current line to end of file</div></div>
-    <div class="pair"><div class="shortcut">dgg</div><div class="description">delete from current line to start of file</div></div>
-    <div class="pair"><div class="shortcut">d/word</div><div class="description">delete until "word" is found</div></div>
-  </div>
-</section>
-
-<section>
-  <h2>Fish shell</h2>
-  <div class="columns">
-    <div class="pair"><div class="shortcut">todo</div><div class="description">todo</div></div>
-  </div>
-</section>
-
-<section>
-  <h2>Web browser</h2>
-  <div class="columns">
-    <div class="pair"><div class="shortcut">Alt-d</div><div class="description">address bar</div></div>
-  </div>
-</section>
-
-<section>
-  <h2>Windows</h2>
-  <div class="columns">
-    <div class="pair"><div class="shortcut">Alt-Spc</div><div class="description">window menu</div></div>
-    <div class="pair"><div class="shortcut">Win-V</div><div class="description">paste history</div></div>
-    <div class="pair"><div class="shortcut">Win-E</div><div class="description">Windows Explorer</div></div>
-    <div class="pair"><div class="shortcut">Win-R</div><div class="description">run</div></div>
-  </div>
-</section>
+  <section>
+    <h2>VS Code</h2>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">toggle terminal</div>
+        <div class="shortcut">Ctrl-J</div>
+      </div>
+      <div class="pair">
+        <div class="description">commands</div>
+        <div class="shortcut">Ctrl-Shf-P</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to file</div>
+        <div class="shortcut">Ctrl-P</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to symbol at cursor</div>
+        <div class="shortcut">F12</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to symbol</div>
+        <div class="shortcut">Ctrl-T</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to bracket</div>
+        <div class="shortcut">Ctrl-Shf-\</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to cpp/h</div>
+        <div class="shortcut">Alt-O</div>
+      </div>
+      <div class="pair">
+        <div class="description">next find</div>
+        <div class="shortcut">F4</div>
+      </div>
+      <div class="pair">
+        <div class="description">next problem</div>
+        <div class="shortcut">Alt-F8</div>
+      </div>
+      <div class="pair">
+        <div class="description">auto completion</div>
+        <div class="shortcut">Ctrl-Spc</div>
+      </div>
+      <div class="pair">
+        <div class="description">multi carets</div>
+        <div class="shortcut">Ctrl-Alt-&amp;ltarrows&gt;</div>
+      </div>
+      <div class="pair">
+        <div class="description">select block</div>
+        <div class="shortcut">Ctrl-Alt-Shf-&amp;ltarrows&gt;</div>
+      </div>
+      <div class="pair">
+        <div class="description">line comment</div>
+        <div class="shortcut">Ctrl-/</div>
+      </div>
+      <div class="pair">
+        <div class="description">block comment</div>
+        <div class="shortcut">Alt-Shf-A</div>
+      </div>
+      <div class="pair">
+        <div class="description">navigate back</div>
+        <div class="shortcut">Alt-Left</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>vi</h2>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">enter insert mode</div>
+        <div class="shortcut">i</div>
+      </div>
+      <div class="pair">
+        <div class="description">return to normal mode</div>
+        <div class="shortcut">Esc</div>
+      </div>
+      <div class="pair">
+        <div class="description">write (save) the file</div>
+        <div class="shortcut">:w</div>
+      </div>
+      <div class="pair">
+        <div class="description">quit</div>
+        <div class="shortcut">:q</div>
+      </div>
+      <div class="pair">
+        <div class="description">save and quit</div>
+        <div class="shortcut">:wq</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete (cut) the current line</div>
+        <div class="shortcut">dd</div>
+      </div>
+      <div class="pair">
+        <div class="description">yank (copy) the current line</div>
+        <div class="shortcut">yy</div>
+      </div>
+      <div class="pair">
+        <div class="description">paste after the cursor</div>
+        <div class="shortcut">p</div>
+      </div>
+      <div class="pair">
+        <div class="description">undo last change</div>
+        <div class="shortcut">u</div>
+      </div>
+      <div class="pair">
+        <div class="description">search for "word"</div>
+        <div class="shortcut">/word</div>
+      </div>
+      <div class="pair">
+        <div class="description">repeat search in same direction</div>
+        <div class="shortcut">n</div>
+      </div>
+      <div class="pair">
+        <div class="description">repeat search in opposite direction</div>
+        <div class="shortcut">N</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to last line</div>
+        <div class="shortcut">G</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to first line</div>
+        <div class="shortcut">gg</div>
+      </div>
+      <div class="pair">
+        <div class="description">join current line with next</div>
+        <div class="shortcut">J</div>
+      </div>
+      <div class="pair">
+        <div class="description">repeat last command</div>
+        <div class="shortcut">. (dot)</div>
+      </div>
+      <div class="pair">
+        <div class="description">show line numbers</div>
+        <div class="shortcut">:set nu</div>
+      </div>
+      <div class="pair">
+        <div class="description">hide line numbers</div>
+        <div class="shortcut">:set nonu</div>
+      </div>
+      <div class="pair">
+        <div class="description">replace "foo" with "bar" globally</div>
+        <div class="shortcut">:%s/foo/bar/g</div>
+      </div>
+      <div class="pair">
+        <div class="description">open file in vertical split</div>
+        <div class="shortcut">:vsplit file</div>
+      </div>
+      <div class="pair">
+        <div class="description">open file in horizontal split</div>
+        <div class="shortcut">:split file</div>
+      </div>
+      <div class="pair">
+        <div class="description">move between splits</div>
+        <div class="shortcut">ctrl-w h/j/k/l</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete character under cursor</div>
+        <div class="shortcut">x</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete character before cursor</div>
+        <div class="shortcut">X</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete word from cursor forward</div>
+        <div class="shortcut">dw</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete entire word (including space)</div>
+        <div class="shortcut">daw</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete to end of word</div>
+        <div class="shortcut">de</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete to end of line</div>
+        <div class="shortcut">d$</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete to start of line</div>
+        <div class="shortcut">d0</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete from cursor to end of line</div>
+        <div class="shortcut">D</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete from current line to end of file</div>
+        <div class="shortcut">dG</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete from current line to start of file</div>
+        <div class="shortcut">dgg</div>
+      </div>
+      <div class="pair">
+        <div class="description">delete until "word" is found</div>
+        <div class="shortcut">d/word</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Fish shell</h2>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">todo</div>
+        <div class="shortcut">todo</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Web browser</h2>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">address bar</div>
+        <div class="shortcut">Alt-d</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Windows</h2>
+    <div class="columns">
+      <div class="pair">
+        <div class="description">window menu</div>
+        <div class="shortcut">Alt-Spc</div>
+      </div>
+      <div class="pair">
+        <div class="description">paste history</div>
+        <div class="shortcut">Win-V</div>
+      </div>
+      <div class="pair">
+        <div class="description">Windows Explorer</div>
+        <div class="shortcut">Win-E</div>
+      </div>
+      <div class="pair">
+        <div class="description">run</div>
+        <div class="shortcut">Win-R</div>
+      </div>
+    </div>
+  </section>
 
 </body>
+
 </html>
