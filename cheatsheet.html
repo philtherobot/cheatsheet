@@ -5,53 +5,123 @@
   <meta charset="UTF-8" />
   <title>Cheatsheet</title>
   <style>
-    body {
-      font-family: sans-serif;
-      padding: 1em;
-      background: #f9f9f9;
-    }
+body {
+  font-family: sans-serif;
+  padding: 1em;
+  background: #1a1a1a; /* Dark background */
+  color: #f2f2f2;       /* Light text */
+}
 
-    h1 {
-      margin-bottom: 0.5em;
-    }
+h1 {
+  margin-bottom: 0.5em;
+  color: #ff9966; /* Soft LCARS orange */
+}
 
-    h2 {
-      border-bottom: 2px solid #ccc;
-      margin-top: 2em;
-    }
+h2 {
+  border-bottom: 2px solid #663399; /* LCARS purple */
+  margin-top: 2em;
+  color: #ffc0cb; /* Light pink for section headers */
+}
 
-    .columns {
-      /*column-count: 3; /* Number of vertical columns */
-      column-width: 250px;
-      column-gap: 2em;
-    }
+.columns {
+  column-width: 250px;
+  column-gap: 2em;
+}
 
-    .pair {
-      display: grid;
-      grid-template-columns: max-content 1fr;
-      gap: 0 0.5em;
-      align-items: center;
-      background: white;
-      padding: 0.3em 0.6em;
-      border-radius: 4px;
-      margin-bottom: 0.5em;
-      break-inside: avoid;
-      /* Prevent splitting pairs across columns */
-    }
+.pair {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 0.5em;
+  align-items: center;
+  background: #2b2b2b; /* Slightly lighter than body */
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  break-inside: avoid;
 
-    .shortcut {
-      font-family: monospace;
-      font-weight: bold;
-      background-color: #eef;
-      padding: 2px 6px;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
+  /* LCARS-style left accent bar */
+  border-left: 6px solid #9966cc; /* Purple LCARS tone */
+}
 
-    .description {
-      padding: 2px 0;
-    }
-  </style>
+.shortcut {
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #ffcc99; /* LCARS peach/orange */
+  color: black;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-block;
+  width: fit-content;
+}
+
+.description {
+  padding: 2px 0;
+  color: #f2f2f2;
+}
+
+dl {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+dt {
+  font-weight: bold;
+  background: #2b2b2b; /* Match .pair background */
+  padding: 0.4em 0.6em;
+  margin-top: 0.6em;
+  border-left: 6px solid #9966cc; /* LCARS purple accent */
+  border-radius: 4px;
+  color: #ffcc99; /* LCARS peach/orange for term */
+  break-inside: avoid;
+}
+
+dd {
+  margin: 0;
+  padding: 0.4em 0.6em 0.6em 1.2em;
+  background: #1f1f1f; /* Slightly darker than dt */
+  border-left: 4px solid #663399; /* Darker LCARS purple */
+  border-radius: 0 4px 4px 0;
+  color: #f2f2f2;
+  font-family: monospace;
+  white-space: pre-wrap; /* Allow wrapping long commands */
+  word-break: break-word;
+}
+.tmux-options {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+.tmux-options th,
+.tmux-options td {
+  border: 1px solid #444;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.tmux-options thead {
+  background-color: #663399; /* LCARS purple */
+  color: #fff;
+}
+
+.tmux-options tbody tr:nth-child(odd) {
+  background-color: #2b2b2b;
+}
+
+.tmux-options tbody tr:nth-child(even) {
+  background-color: #1f1f1f;
+}
+
+.tmux-options code {
+  background-color: #333;
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  color: #ffcc99; /* LCARS peach */
+  font-family: monospace;
+}
+</style>
 </head>
 
 <body>
@@ -110,7 +180,61 @@
         <div class="description">rename window</div>
         <div class="shortcut">,</div>
       </div>
+      <div class="pair">
+        <div class="description">swap pane</div>
+        <div class="shortcut">:swap-pane -U</div>
+      </div>
+      <div class="pair">
+        <div class="description">close current tmux</div>
+        <div class="shortcut">tmux kill-session</div>
+      </div>
     </div>
+<dl>
+  <dt>remove all pane border text</dt>
+  <dd><code>tmux set-option -g pane-border-format ""</code></dd>
+  <dt>stop session "wks"</dt>
+  <dd><code>tmux kill-session -t wks</code></dd>
+  <dt>get option</dt>
+  <dd>tmux show-option -g pane-border-format</dd>
+  <dt>unset option</dt>
+  <dd>tmux set-option -u status-left</dd>
+</dl>
+<table class="tmux-options">
+  <thead>
+    <tr>
+      <th>What</th>
+      <th>Name</th>
+      <th>Possible Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>status bar visibility</td>
+      <td><code>status</code></td>
+      <td><code>on</code>, <code>off</code></td>
+    </tr>
+    <tr>
+      <td>status bar position</td>
+      <td><code>status-position</code></td>
+      <td><code>top</code>, <code>bottom</code></td>
+    </tr>
+    <tr>
+      <td>status content</td>
+      <td><code>status-left</code>, <code>status-right</code></td>
+      <td><code>"%H:%M"</code></td>
+    </tr>
+    <tr>
+      <td>pane border colors</td>
+      <td><code>pane-border-style</code></td>
+      <td><code>fg=color</code>, <code>bg=color</code></td>
+    </tr>
+    <tr>
+      <td>pane border content</td>
+      <td><code>pane-border-format</code></td>
+      <td><code>"#{pane_title}"</code></td>
+    </tr>
+  </tbody>
+</table>
   </section>
 
   <section>
@@ -232,6 +356,22 @@
         <div class="shortcut">F12</div>
       </div>
       <div class="pair">
+        <div class="description">peek definition</div>
+        <div class="shortcut">Alt-F12</div>
+      </div>
+      <div class="pair">
+        <div class="description">find references</div>
+        <div class="shortcut">Alt-Shf-F12</div>
+      </div>
+      <div class="pair">
+        <div class="description">go to references</div>
+        <div class="shortcut">Shf-F12</div>
+      </div>
+      <div class="pair">
+        <div class="description">rename</div>
+        <div class="shortcut">F2</div>
+      </div>
+      <div class="pair">
         <div class="description">go to symbol</div>
         <div class="shortcut">Ctrl-T</div>
       </div>
@@ -257,11 +397,11 @@
       </div>
       <div class="pair">
         <div class="description">multi carets</div>
-        <div class="shortcut">Ctrl-Alt-&amp;ltarrows&gt;</div>
+        <div class="shortcut">Ctrl-Alt-&lt;arrows&gt;</div>
       </div>
       <div class="pair">
         <div class="description">select block</div>
-        <div class="shortcut">Ctrl-Alt-Shf-&amp;ltarrows&gt;</div>
+        <div class="shortcut">Ctrl-Alt-Shf-&lt;arrows&gt;</div>
       </div>
       <div class="pair">
         <div class="description">line comment</div>
@@ -274,6 +414,14 @@
       <div class="pair">
         <div class="description">navigate back</div>
         <div class="shortcut">Alt-Left</div>
+      </div>
+      <div class="pair">
+        <div class="description">next diff</div>
+        <div class="shortcut">Alt-F5</div>
+      </div>
+      <div class="pair">
+        <div class="description">rewrap comment</div>
+        <div class="shortcut">Alt-Q</div>
       </div>
     </div>
   </section>
@@ -412,6 +560,10 @@
         <div class="description">delete until "word" is found</div>
         <div class="shortcut">d/word</div>
       </div>
+      <div class="pair">
+        <div class="description">replace in file</div>
+        <div class="shortcut">:%s/old/new/g</div>
+      </div>
     </div>
   </section>
   <section>
@@ -422,6 +574,13 @@
         <div class="shortcut">todo</div>
       </div>
     </div>
+<dl>
+  <dt>set prompt</dt>
+  <dd><code>function fish_prompt; echo -n "$USER@ $PWD > "; end</code></dd>
+  <dt>set title</dt>
+  <dd><code>function fish_title; echo Telnet; end</code></dd>
+</dl>
+
   </section>
   <section>
     <h2>Web browser</h2>
@@ -429,6 +588,10 @@
       <div class="pair">
         <div class="description">address bar</div>
         <div class="shortcut">Alt-d</div>
+      </div>
+      <div class="pair">
+        <div class="description">new tab</div>
+        <div class="shortcut">Ctrl-T</div>
       </div>
     </div>
   </section>
